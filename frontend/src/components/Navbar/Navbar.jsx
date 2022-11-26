@@ -5,8 +5,21 @@ import "./Navbar.scss"
 
 const Navbar = () => {
    return (
-      <nav>
-         <img src={images.logo} alt="logo" />      
+      <nav className="app__navbar">
+         <div className="app__navbar-logo">
+            <img src={images.logo} alt="logo" />      
+         </div>
+         <ul className="app__navbar-links">
+            {["home", "about", "contact", "works", "skills", "contact"].map((item)=>(
+               <li 
+                  key={`link-${item}`}
+                  className="app__flex p-text"
+               >
+                  <div></div>
+                  <a href={`#${item}`}>{item}</a>
+               </li>
+            ))}
+         </ul>
       </nav>
    )
 }
