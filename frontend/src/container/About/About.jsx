@@ -2,22 +2,23 @@ import React from "react"
 import { motion } from "framer-motion"
 
 import "./About.scss"
+import { images } from "../../constants"
 
 const abouts = [
    {
       title: "Web Development",
       description: "I am a good web developer",
-      imgUrl: "",
+      imgUrl: images.about01,
    },
    {
       title: "Web Design",
       description: "I am a good web developer",
-      imgUrl: "",
+      imgUrl: images.about02,
    },
    {
       title: "UI/UX",
       description: "I am a good web developer",
-      imgUrl: "",
+      imgUrl: images.about03,
    },
 ]
 
