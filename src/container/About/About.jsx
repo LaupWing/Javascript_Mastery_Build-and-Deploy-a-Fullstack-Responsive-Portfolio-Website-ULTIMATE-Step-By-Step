@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
 import "./About.scss"
 import { images } from "../../constants"
+import { client, urlFor } from "../../client"
 
 const abouts = [
    {
@@ -23,6 +24,19 @@ const abouts = [
 ]
 
 const About = () => {
+   const [about, setAbout] = useState([])
+
+   useEffect(() => {
+      const query = "*[_type == 'abouts']"
+      
+      client.fetch(query)
+         .then((data)=>{
+            console.log(data)
+            setAbout(data)
+         })
+   }, [])
+   
+
    return (
       <>
          <h2 className="head-text">
