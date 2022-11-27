@@ -5,26 +5,9 @@ import "./About.scss"
 import { images } from "../../constants"
 import { client, urlFor } from "../../client"
 
-const abouts = [
-   {
-      title: "Web Development",
-      description: "I am a good web developer",
-      imgUrl: images.about01,
-   },
-   {
-      title: "Web Design",
-      description: "I am a good web developer",
-      imgUrl: images.about02,
-   },
-   {
-      title: "UI/UX",
-      description: "I am a good web developer",
-      imgUrl: images.about03,
-   },
-]
 
 const About = () => {
-   const [about, setAbout] = useState([])
+   const [abouts, setAbout] = useState([])
 
    useEffect(() => {
       const query = "*[_type == 'abouts']"
